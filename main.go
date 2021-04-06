@@ -21,14 +21,14 @@ var indexHTML []byte
 
 func main() {
 	a := &App{
-		dir: "p-data",
+		dir: "data",
 	}
 	a.init()
 
 	mux := http.NewServeMux()
 	mux.Handle("/index.html", http.RedirectHandler("/", http.StatusFound))
 	mux.Handle("/", a)
-	log.Fatal(http.ListenAndServe(":10788", mux))
+	log.Fatal(http.ListenAndServe("127.0.0.1:28002", mux))
 }
 
 type App struct {
@@ -48,7 +48,8 @@ func (a *App) init() {
 }
 
 func (a *App) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	if r.Method == http.MethodPost && r.URL.Path == "/" {
+	log.Printf("ACCESS %s %s %s %s", r.Method, r.URL.Path, r.UserAgent(), r.RemoteAddr)
+	if r.Method == http.MethodPost && r.URL.Path == "/api/v0/form" {
 		a.formHandler(w, r)
 		return
 	}

@@ -3,7 +3,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
   <title>paste</title>
-  <link rel="stylesheet" href="base.css" crossorigin />
 
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="simple content sharing service" />
@@ -107,43 +106,8 @@
     hgroup *:nth-child(n + 5) {
       grid-row: 2 / span 1;
     }
-    /* ===== full bleed ===== */
-    form footer,
-    iframe,
-    pre,
-    table,
-    picture {
-      grid-column: 1 / span 5;
-      margin: 1em -1vmin;
-    }
-    picture img {
-      width: 100%;
-      margin: auto;
-    }
 
     /* ===== layout main ===== */
-    h3,
-    h4,
-    picture {
-      margin: 25vh 0 0.25em 0;
-    }
-
-    h5,
-    h6 {
-      margin: 1.5em 0 0.25em 0;
-    }
-    h3 {
-      font-size: 2.441em;
-    }
-    h4 {
-      font-size: 1.953em;
-    }
-    h5 {
-      font-size: 1.563em;
-    }
-    h6 {
-      font-size: 1.25em;
-    }
     p {
       line-height: 1.5;
       margin: 0 0 1em 0;
@@ -177,51 +141,6 @@
       text-decoration: none;
     }
 
-    ul {
-      list-style: none;
-      margin: 0;
-    }
-    ul > * {
-      margin: 0.5em;
-      line-height: 1.5em;
-    }
-    ul > li:before {
-      content: "»";
-      margin: 0 1ch 0 -3ch;
-      position: absolute;
-    }
-
-    ol > * {
-      line-height: 1.75em;
-    }
-
-    blockquote {
-      margin: 1em;
-      padding: 0.25em 1em;
-      border-left: 1ch solid #999;
-    }
-
-    code {
-      background: #303030;
-      font: 1em "Inconsolata", monospace;
-      padding: 0.1em;
-    }
-    pre {
-      background: #303030;
-      overflow-x: scroll;
-      padding: 1em;
-    }
-    pre::-webkit-scrollbar {
-      display: none;
-    }
-    pre code {
-      padding: 0;
-    }
-
-    iframe {
-      margin: auto;
-    }
-
     em {
       color: #a06be0;
       background-color: unset;
@@ -230,26 +149,6 @@
     }
     time {
       color: #999;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-style: hidden;
-    }
-    th,
-    td {
-      padding: 0.4em;
-      text-align: left;
-    }
-    th {
-      font-weight: 700;
-      border-bottom: 0.2em solid #999;
-    }
-    tr:nth-child(5n) td {
-      border-bottom: 0.1em solid #999;
-    }
-    tbody tr:hover {
-      background: #404040;
     }
 
     textarea {
@@ -318,7 +217,7 @@
     </a>
   </hgroup>
 
-  <form id="form" autocomplete="off" action="/" enctype="multipart/form-data" method="POST"></form>
+  <form id="form" autocomplete="off" action="/api/v0/form" enctype="multipart/form-data" method="POST"></form>
 
   <textarea
     id="paste"
