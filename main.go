@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -20,15 +21,20 @@ import (
 var indexHTML []byte
 
 func main() {
+	var data, addr string
+	flag.StringVar(&data, "data", "data", "path to data dir")
+	flag.StringVar(&addr, "addr", "127.0.0.1:28002", "address to listen on")
+	flag.Parse()
+
 	a := &App{
-		dir: "data",
+		dir: data,
 	}
 	a.init()
 
 	mux := http.NewServeMux()
 	mux.Handle("/index.html", http.RedirectHandler("/", http.StatusFound))
 	mux.Handle("/", a)
-	log.Fatal(http.ListenAndServe("127.0.0.1:28002", mux))
+	log.Fatal(http.ListenAndServe(addr, mux))
 }
 
 type App struct {
@@ -104,7 +110,7 @@ func (a *App) formHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/"+filepath.Base(f.Name()), http.StatusFound)
+	http.Redirect(w, r, "/"+filepath.Base(f.Name()), http.StatusSeeOther)
 }
 
 func uniqDir(dir, ext string) (*os.File, error) {
