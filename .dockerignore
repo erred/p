@@ -1,0 +1,6 @@
+.git
+kustomize
+Dockerfile
+LICENSE
+README.md
+skaffold.yaml

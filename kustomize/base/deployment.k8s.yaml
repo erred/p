@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: p
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    spec:
+      containers:
+        - name: p
+          image: docker.seankhliao.com/p:latest
+          args:
+            - -addr=0.0.0.0:8080
+            - -data=/data
+          ports:
+            - name: http
+              containerPort: 8080
+          volumeMounts:
+            - mountPath: /data
+              name: data
+      enableServiceLinks: false
+      serviceAccountName: p
+      terminationGracePeriodSeconds: 10
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: p-data
