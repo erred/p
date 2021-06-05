@@ -16,7 +16,7 @@ build:
     pullSecretName: kaniko-secret
     namespace: skaffold
 deploy:
-  kubeContext: kind-cluster29
+  kubeContext: kind-cluster29a
   kustomize:
     paths:
       - kustomize/overlays/prod
