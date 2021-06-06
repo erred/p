@@ -11,7 +11,6 @@ spec:
         - name: p
           image: docker.seankhliao.com/p:latest
           args:
-            - -addr=0.0.0.0:8080
             - -data=/data
           ports:
             - name: http
