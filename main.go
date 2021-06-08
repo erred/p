@@ -64,12 +64,13 @@ func (a *App) init() error {
 	ro := &render.Options{
 		MarkdownSkip: true,
 		Data: render.PageData{
-			Title:       `paste`,
-			Description: `simple paste service`,
-			H1:          `paste`,
-			H2:          `upload`,
-			Style:       style,
-			Compact:     true,
+			Compact:      true,
+			URLCanonical: "https://p.seankhliao.com",
+			Title:        `paste`,
+			Description:  `simple paste service`,
+			H1:           `paste`,
+			H2:           `upload`,
+			Style:        style,
 		},
 	}
 
