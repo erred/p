@@ -12,6 +12,9 @@ build:
       whitelistVarRun: true
       image: gcr.io/kaniko-project/executor:latest
       registryMirror: mirror.gcr.io
+      # env:
+      #   - name: GOPROXY
+      #     value: https://athens.seankhliao.com,direct
   cluster:
     pullSecretName: kaniko-secret
     namespace: skaffold

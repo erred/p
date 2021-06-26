@@ -1,5 +1,5 @@
 FROM golang:alpine AS build
-ENV CGO_ENABLED=0
+ENV CGO_ENABLED=0 GOPROXY=https://athens.seankhliao.com
 WORKDIR /workspace
 COPY . .
 RUN go build -trimpath -ldflags='-s -w' -o p
