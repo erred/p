@@ -1,5 +1,8 @@
 FROM golang:alpine AS build
-ENV CGO_ENABLED=0 GOPROXY=https://athens.seankhliao.com
+ARG CGO_ENABLED=0
+ARG GOPROXY=https://proxy.golang.org,direct
+ARG GOMODCACHE=/go/pkg/mod
+ARG GOCACHE=/root/.cache/go-build
 WORKDIR /workspace
 COPY . .
 RUN go build -trimpath -ldflags='-s -w' -o p
