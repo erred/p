@@ -110,6 +110,8 @@ go.opentelemetry.io/proto/otlp v0.9.0 h1:C0g6TWmQYvjKRnljRULLWUVJGy8Uvu0NEL/5frY
 go.opentelemetry.io/proto/otlp v0.9.0/go.mod h1:1vKfU9rv61e9EVGthD1zNvUbiwPcimSsOPU9brfSHJg=
 go.seankhliao.com/w/v16 v16.0.0-20210627124008-2a4876c19395 h1:skbLsRw1jLHV4PglRbXSOqexm6XwvpS1Gvce6hkp3eU=
 go.seankhliao.com/w/v16 v16.0.0-20210627124008-2a4876c19395/go.mod h1:SzB5OJlk65XSJoh0musnj+vXxOLH2nS1l66IOTHs9Qs=
+go.seankhliao.com/w/v16 v16.0.0-20210628193519-c56ea4d81554 h1:1D/i1LN6pOb+aBDmCZLZ1/sLs2D38+6mAW4kGwb9NVM=
+go.seankhliao.com/w/v16 v16.0.0-20210628193519-c56ea4d81554/go.mod h1:yKIv+boNe6neYlc6LzwnBC3qk23fHvsfTUUPo2RXkdo=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
 golang.org/x/exp v0.0.0-20190121172915-509febef88a4/go.mod h1:CJ0aWSM057203Lf6IL+f9T1iT9GByDxfZKAQTCR3kQA=

@@ -19,7 +19,7 @@ require (
 	go.opentelemetry.io/otel/sdk/metric v0.21.0 // indirect
 	go.opentelemetry.io/otel/trace v1.0.0-RC1 // indirect
 	go.opentelemetry.io/proto/otlp v0.9.0 // indirect
-	go.seankhliao.com/w/v16 v16.0.0-20210627124008-2a4876c19395
+	go.seankhliao.com/w/v16 v16.0.0-20210628193519-c56ea4d81554
 	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
 	golang.org/x/sys v0.0.0-20210603081109-ebe580a85c40 // indirect
 	golang.org/x/text v0.3.2 // indirect
