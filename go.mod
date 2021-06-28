@@ -35,6 +35,7 @@ require (
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
 	github.com/kr/text v0.1.0 // indirect
 	github.com/tdewolff/parse/v2 v2.5.18 // indirect
+	go.opentelemetry.io/contrib/propagators v0.21.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.21.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v0.21.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.0.0-RC1 // indirect
