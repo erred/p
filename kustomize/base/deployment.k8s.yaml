@@ -11,6 +11,7 @@ spec:
         - name: p
           image: docker.seankhliao.com/p:latest
           args:
+            - -otlp.endpoint=otelcol.otelcol.svc.cluster.local:4317
             - -data=/data
           ports:
             - name: http
